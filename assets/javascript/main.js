@@ -9,6 +9,12 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
 
 console.log('Ciao!');
 
+// Generatore Numeri da 1 a 100
+for(let i=0;i<100;i++)
+{
+    console.log(i+1);
+}
+
 
 
 
