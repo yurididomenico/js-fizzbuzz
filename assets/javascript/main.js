@@ -14,9 +14,15 @@ let x;
 let y;
 let z;
 
+let contenitore = document.getElementById('FizzBuzzSpace');
+
+
 // ---------- Generatore Numeri da 1 a 100 ----------
-for(let i=1;i<=100;i++)
-{
+for (let i = 1; i <= 100; i++) {
+    let div = document.createElement('div');
+    div.classList.add('quad');
+    
+
     //Assegno alle variabili di appoggio (x & y) il valore di i
     x = i;
     y = i;
@@ -28,28 +34,49 @@ for(let i=1;i<=100;i++)
     z %= 15;
 
     //Interrogo le variabili appoggio (z - y - x):
-    //  -se il resto di z è 0 allora stampo FizzBuzz!
-    //  -altrimenti se il resto di y è 0 stampo Buzz!
-    //  -altrimenti se il resto di x è 0 stampo Fizz!
-    //  -altrimenti stampo il valore di i
-    if(z === 0)
+    if (z === 0) 
     {
-        console.log("FizzBuzz!");
+        div.innerText += "FizzBuzz!";
+        div.classList.add('personal-bg-red');
     }
-    else if(y === 0)
+    else if (y === 0) 
     {
-        console.log("Buzz!");
+        div.innerText += "Buzz!";
+        div.classList.add('personal-bg-green');
     }
-    else if(x === 0)
+    else if (x === 0) 
     {
-        console.log("Fizz!");
+        div.innerText += "Fizz!";
+        div.classList.add('personal-bg-yellow');
     }
-    else
+    else 
     {
+        div.innerText += i;
         console.log(i);
+        div.classList.add('personal-bg-lightblue');
     }
 
+    contenitore.append(div);
+
 }
+
+
+
+
+// -----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
